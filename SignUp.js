@@ -21,9 +21,20 @@ function validation(){
     if(email.match(pattern)) {
         form.classList.add("valid");
         form.classList.remove("invalid");
+
     }
     else {
         form.classList.remove("valid");
         form.classList.add("invalid");
+        text.innerHTML = "Please Enter Valid Email";
+        text.style.color = "00ff00";
+
     }
+    if (email == "") {
+        form.classList.remove("valid");
+        form.classList.remove("invalid");
+        text.innerHTML = "";
+        text.style.color = "00ff00";
+    }
+
 }
