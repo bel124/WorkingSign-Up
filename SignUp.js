@@ -5,19 +5,19 @@ function validfname() {
     var pro = document.getElementById("Profession").value;
 
 
-    if (typeof fn !== String) {
+    if (typeof fn !== 'string') {
         document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
     }
 
-    if (typeof ln !== String) {
+    if (typeof ln !== 'string') {
         document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
     }
 
-    if (typeof ht !== String) {
+    if (typeof ht !== 'string') {
         document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
     }
 
-    if (typeof pro !== String) {
+    if (typeof pro !== 'string') {
         document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
     }
 }
