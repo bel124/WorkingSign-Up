@@ -5,20 +5,19 @@ function validfname() {
     var pro = document.getElementById("Profession").value;
 
 
-
-    if (fn !== String) {
+    if (typeof fn !== String) {
         document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
     }
 
-    if (ln !== String) {
+    if (typeof ln !== String) {
         document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
     }
 
-    if (ht !== String) {
+    if (typeof ht !== String) {
         document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
     }
 
-    if (pro !== String) {
+    if (typeof pro !== String) {
         document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
     }
 }
@@ -47,5 +46,11 @@ function validation(){
         text.innerHTML = "";
         text.style.color = "00ff00";
     }
+
+    function cancel(){
+
+    }
+
+
 
 }
