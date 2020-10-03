@@ -18,7 +18,7 @@ function validEmail(email){
     var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         if(mailformat.test(email.value) ==false){
             alert('Invalid email address. Please try again!');
-            return(false);
+            returnfalse;
         }
         return true;
 }
