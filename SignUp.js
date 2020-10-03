@@ -13,7 +13,8 @@ for (var i = 0; i <64; i++){
 }
 
 function validEmail(inputText){
-        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var em = document.getElementById("email").value;
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         if(inputText.value.match(mailformat))
         {
             alert("Valid email address!");
@@ -32,5 +33,5 @@ function validEmail(inputText){
 }
 
     function cancel(){
-
+        document.getElementById("form").reset();
     }
