@@ -4,20 +4,10 @@ function validfname() {
     var ht = document.getElementById("town").value;
     var pro = document.getElementById("Profession").value;
 
-
-    if (typeof fn !== 'string') {
-        document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
-    }
-
-    if (typeof ln !== 'string') {
-        document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
-    }
-
-    if (typeof ht !== 'string') {
-        document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
-    }
-
-    if (typeof pro !== 'string') {
+for (var i = 0; i <64; i++){
+    if (isNaN(validfname())) {
+        document.getElementById("output").textContent = "Input is valid";
+    } else {
         document.getElementById("output").textContent = "Input is not valid. Only text is allowed. Any other characters are invalid, such as numbers and '+*/!@#$%^&*(), etc.";
     }
 }
@@ -30,9 +20,13 @@ function validation(){
 
     if(email.match(pattern)) {
         form.classList.add("valid");
-        form.classList.remove("invalid");
+        form.classList.remove("invalid"); }
 
+    if(pattern.test(email)) {
+        form.classList.add("valid");
+        form.classList.remove("invalid");
     }
+
     else {
         form.classList.remove("valid");
         form.classList.add("invalid");
@@ -50,7 +44,6 @@ function validation(){
     function cancel(){
 
     }
-
 
 
 }
