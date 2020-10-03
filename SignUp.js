@@ -12,38 +12,25 @@ for (var i = 0; i <64; i++){
     }
 }
 
-function validation(){
-    var form = document.getElementById("form");
-    var email = document.getElementById("email").value;
-    var text = document.getElementById("text");
-    var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if(email.match(pattern)) {
-        form.classList.add("valid");
-        form.classList.remove("invalid"); }
-
-    if(pattern.test(email)) {
-        form.classList.add("valid");
-        form.classList.remove("invalid");
+function validEmail(inputText){
+        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(inputText.value.match(mailformat))
+        {
+            alert("Valid email address!");
+            document.form.email.focus();
+            return true;
+        }
+        else
+        {
+            alert("You have entered an invalid email address!");
+            document.form.email.focus();
+            return false;
     }
+}
 
-    else {
-        form.classList.remove("valid");
-        form.classList.add("invalid");
-        text.innerHTML = "Please Enter Valid Email";
-        text.style.color = "00ff00";
 
-    }
-    if (email == "") {
-        form.classList.remove("valid");
-        form.classList.remove("invalid");
-        text.innerHTML = "";
-        text.style.color = "00ff00";
-    }
+}
 
     function cancel(){
 
     }
-
-
-}
