@@ -28,7 +28,7 @@ function validEmail(inputText){
             return false;
     }
 }
-
+ //do not know why function validEmail is being 'unused'
 
 }
 
